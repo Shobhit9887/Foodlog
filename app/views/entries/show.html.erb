@@ -1,0 +1,19 @@
+<%= content_for :title do %>
+  <%= @entry.meal_type %> &ndash; <%= @entry.created_at.to_formatted_s(:nice_date) %>
+<% end %>
+
+<div class="is-centered has-text-centered">
+  <%= link_to "Back to entries", entries_path, class: "button is-centered is-link mt-2" %>
+</div>
+<%= render @entry %>
+<!--
+<div>
+
+  <%= link_to "Edit this entry", edit_entry_path(@entry) %> |
+  <%= link_to "Back to entries", entries_path %>
+
+  <%= button_to "Destroy this entry", @entry, method: :delete %>
+</div>
+-->
+
+
